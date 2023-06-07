@@ -14,7 +14,7 @@ while (contador < listaDeTeclas.length) {
   const idAudio = `#som_${instrumento}`;
 
   tecla.onclick = function () {
-    tocaSom(idAudio);
+    playSound(idAudio);
   }
     contador = contador + 1;
 
