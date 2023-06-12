@@ -1,5 +1,14 @@
-function playSound (idElementoAudio) {
-    document.querySelector(idElementoAudio).play();
+function playSound (seletorAudio) {
+    const elemento = document.querySelector(seletorAudio);
+
+    if (elemento && elemento.localName === 'audio') {
+        elemento.play();
+    }
+
+    else {
+        //alert('Elemento não encontrado');
+        console.log('Elemento não encontrado ou seletor inválido');
+    }
 }
 
 const listaDeTeclas = document.querySelectorAll('.tecla');
@@ -12,7 +21,7 @@ for (let contador = 0; contador < listaDeTeclas.length; contador++) {
     const idAudio = `#som_${instrumento}`; //template string
 
     tecla.onclick = function () {
-        tocaSom(idAudio);
+        playSound (idAudio);
     }
 
     tecla.onkeydown = function (evento) {
@@ -28,21 +37,3 @@ for (let contador = 0; contador < listaDeTeclas.length; contador++) {
     }
 
 }
-
-
-/* EXEMPLO DE CÓDIGO POM E CLAP
-
-function playSoundPom () {
-    document.querySelector('#som_tecla_pom').play();
-}
-
-function playSoundClap() {
-    document.querySelector('#som_tecla_clap').play();
-}
-
-
-
-document.querySelector('.tecla_pom').onclick = playSoundPom;
-document.querySelector('.tecla_clap').onclick = playSoundClap;
-
-*/
