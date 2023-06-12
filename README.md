@@ -5,4 +5,4 @@ Projeto de Reprodutor de Sons (áudios) realizado a partir das aulas do curso ''
 - Tecnologias utilizadas no projeto: HTML | CSS | JavaScript.
 
 #### EchoBox (Reprodutor de Sons)
-- Link da página: Em breve.
+- Link da página: https://antonioneto30.github.io/echobox-soundplayer/
